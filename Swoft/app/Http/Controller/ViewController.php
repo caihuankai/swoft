@@ -35,6 +35,7 @@ class ViewController
      */
     public function index(Response $response): Response
     {
+        //test
         $response = $response->withContent('<html lang="en"><h1>Swoft framework</h1></html>');
         $response = $response->withContentType(ContentType::HTML);
         return $response;
