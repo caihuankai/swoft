@@ -54,6 +54,8 @@ class HomeController
     public function hi(): Response
     {
         $Group = new Group();
+        $Group->setName('test');
+        $Group->save();
         $nId = 'id:'.$Group->getId();
         return context()->getResponse()->withContent($nId);
     }
