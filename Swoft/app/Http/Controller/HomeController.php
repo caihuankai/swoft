@@ -37,6 +37,7 @@ class HomeController
     public function index(): Response
     {
         /** @var Renderer $renderer */
+        //test
         $renderer = Swoft::getBean('view');
         $content  = $renderer->render('home/index');
 
