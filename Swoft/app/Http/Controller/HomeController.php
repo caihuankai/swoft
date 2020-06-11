@@ -10,7 +10,9 @@
 
 namespace App\Http\Controller;
 
+use App\Migration\User;
 use App\Model\Data\GoodsData;
+use MongoDB\Driver\Query;
 use Swoft;
 use Swoft\Http\Message\ContentType;
 use Swoft\Http\Message\Response;
@@ -22,6 +24,7 @@ use function bean;
 use function context;
 use Swoft\Http\Server\Annotation\Mapping\Middleware;
 use App\Http\Middleware\HomeMiddleware;
+use App\Model\Entity\Group;
 
 /**
  * Class HomeController
@@ -50,7 +53,9 @@ class HomeController
      */
     public function hi(): Response
     {
-        return context()->getResponse()->withContent('hi');
+        $Group = new Group();
+        $nId = $Group->getId();
+        return context()->getResponse()->withContent($nId);
     }
 
     /**
