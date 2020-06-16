@@ -21,7 +21,7 @@ use Swoole\WebSocket\Server;
 /**
  * Class EchoModule
  *
- * @WsModule("echo")
+ * @WsModule("/")
  */
 class EchoModule
 {
