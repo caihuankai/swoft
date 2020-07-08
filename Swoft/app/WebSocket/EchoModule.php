@@ -32,6 +32,7 @@ class EchoModule
      */
     public function onOpen(Request $request, int $fd): void
     {
+        //test
         Session::current()->push("Opened, welcome #{$fd}!");
     }
 
